@@ -77,8 +77,48 @@
             <h2>Contato</h2>
             <p>Dúvidas? Fale com a gente pelo e-mail <a href="mailto:contato@ingressosfacil.com">contato@ingressosfacil.com</a>.</p>
         </section>
+
+        <section id="video">
+            <video id="videoEvento" width="480" poster="./poison.jpg" controls muted autoplay loop>
+                <source src="./video.mp4" type="video/mp4">
+                Seu navegador não suporta este vídeo.
+            </video>
+        </section>
+
+        <section>
+            <iframe src="https://maps.google.com/maps?q=UNIFRAN&z=16&output=embed" width="100%" heigth="300"
+            loading="lazy" style="border:0;" allowfullscream>
+
+            </iframe>
+        </section>
+
+        <section id="exemplo-canvas">
+            <canvas id="seloEvento" width="200" height="200" >
+
+            </canvas>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 IngressosFácil - Todos os direitos reservados</p>
     </footer>
+
+    <script>
+        const canvas = document.getElementById('seloEvento');
+        const ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.arc(100, 100, 90, 0, Math.PI * 2);
+        ctx.fillStyle = '#2c3e50';
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(100, 100, 90, 0, Math.PI * 2);
+        ctx.strokeStyle = '#f4d03f';
+        ctx.lineWidth = 6;
+        ctx.stroke();
+
+        ctx.fillStyle = '#ffffff';
+        ctx.font = 'bold 20px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText('VIP', 100, 108);
+    </script>
